@@ -6,6 +6,12 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryManager", "InventoryManager\InventoryManager.csproj", "{FEDBB31D-5A20-4BF4-BC7F-582A64183086}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL Scripts", "SQL Scripts", "{D7501AD9-F88D-4F45-A69C-ABDDFCE8B698}"
+	ProjectSection(SolutionItems) = preProject
+		SQLProcedures.sql = SQLProcedures.sql
+		SQLTables.sql = SQLTables.sql
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryManagerDesktop", "InventoryManagerDesktop\InventoryManagerDesktop.csproj", "{DB70D786-5013-49ED-B230-15A9A398555D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +23,10 @@ Global
 		{FEDBB31D-5A20-4BF4-BC7F-582A64183086}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEDBB31D-5A20-4BF4-BC7F-582A64183086}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEDBB31D-5A20-4BF4-BC7F-582A64183086}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB70D786-5013-49ED-B230-15A9A398555D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB70D786-5013-49ED-B230-15A9A398555D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB70D786-5013-49ED-B230-15A9A398555D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB70D786-5013-49ED-B230-15A9A398555D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
