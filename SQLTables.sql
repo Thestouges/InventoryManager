@@ -12,14 +12,23 @@ GO
 
 CREATE TABLE [dbo].[ItemTypes](
 	[Type] [nvarchar](50) NOT NULL,
-	[Description] [nvarchar](50) NULL
+	[Description] [nvarchar](50) NULL,
+ CONSTRAINT [PK_ItemTypes] PRIMARY KEY CLUSTERED 
+(
+	[Type] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
 
 CREATE TABLE [dbo].[Log](
-	[LogID] [int] NOT NULL,
-	[ItemID] [int] NOT NULL,
-	[Trans] [nvarchar](50) NOT NULL,
-	[Quantity] [int] NOT NULL
+	[LogID] [int] IDENTITY(1,1) NOT NULL,
+	[ItemID] [int] NULL,
+	[Trans] [nvarchar](50) NULL,
+	[Quantity] [int] NULL,
+	[Timestamp] [datetime] NULL,
+ CONSTRAINT [PK_Log] PRIMARY KEY CLUSTERED 
+(
+	[LogID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
