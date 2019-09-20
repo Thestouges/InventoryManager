@@ -44,22 +44,26 @@ namespace InventoryManagerDesktop
 
         private void BtnCheck_Click(object sender, EventArgs e)
         {
-
+            InventoryCheckItems inventoryCheck = new InventoryCheckItems();
+            inventoryCheck.ShowDialog();
         }
 
         private void BtnModify_Click(object sender, EventArgs e)
         {
-
+            InventoryModify inventoryModify = new InventoryModify();
+            inventoryModify.ShowDialog();
         }
 
         private void BtnRemove_Click(object sender, EventArgs e)
         {
-
+            InventoryRemove inventoryRemove = new InventoryRemove();
+            inventoryRemove.ShowDialog();
         }
 
         private void BtnViewHistory_Click(object sender, EventArgs e)
         {
-
+            InventoryHistory inventoryHistory = new InventoryHistory();
+            inventoryHistory.ShowDialog();
         }
 
         private void BtnAddItemType_Click(object sender, EventArgs e)

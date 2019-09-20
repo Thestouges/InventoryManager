@@ -60,6 +60,19 @@ namespace InventoryManagerDesktop
             }
         }
 
+        public DataTable GetAllItems()
+        {
+            SqlConnection conn = new SqlConnection(Global.connectionStr);
+            SqlCommand cmd = new SqlCommand("GetAllItems", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            SqlDataAdapter sqladapter = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sqladapter.Fill(dt);
+
+            return dt;
+        }
+
         public DataTable GetAllItemsTypes()
         {
             SqlConnection conn = new SqlConnection(Global.connectionStr);
@@ -137,13 +150,13 @@ namespace InventoryManagerDesktop
             }
         }
 
-        public void RemoveItem(string itemID)
+        public void RemoveItem(int itemID)
         {
             SqlConnection conn = new SqlConnection(Global.connectionStr);
             SqlCommand cmd = new SqlCommand("AddItem", conn);
             cmd.CommandType = CommandType.StoredProcedure;
 
-            cmd.Parameters.Add("@itemID", SqlDbType.NVarChar);
+            cmd.Parameters.Add("@itemID", SqlDbType.Int);
             cmd.Parameters["@itemID"].Value = itemID;
 
 
@@ -158,6 +171,19 @@ namespace InventoryManagerDesktop
                 conn.Close();
                 throw new Exception(ex.Message);
             }
+        }
+
+        public DataTable GetInventoryHistory()
+        {
+            SqlConnection conn = new SqlConnection(Global.connectionStr);
+            SqlCommand cmd = new SqlCommand("GetInventoryHistory", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            SqlDataAdapter sqladapter = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sqladapter.Fill(dt);
+
+            return dt;
         }
     }
 }

@@ -38,6 +38,20 @@ BEGIN
 END
 Go
 
+ALTER PROCEDURE [dbo].[GetAllItems]
+	-- Add the parameters for the stored procedure here
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	SELECT B.Description, A.Item, A.Quantity from Item as A
+	inner join ItemTypes as B on A.Type = B.Type
+END
+Go
+
 ALTER PROCEDURE [dbo].[GetAllItemsTypes]
 	-- Add the parameters for the stored procedure here
 AS
@@ -61,9 +75,24 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	select * from ItemTypes as A
+	select A.Description, B.Item, B.Quantity from ItemTypes as A
 	inner join Item as B on A.Type = B.Type
 	where A.Type = @type
+END
+Go
+
+ALTER PROCEDURE [dbo].[GetInventoryHistory]
+	-- Add the parameters for the stored procedure here
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	SELECT B.Item, C.Description, A.Trans, A.Quantity, A.Timestamp from [Log] as A
+	inner join Item as B on A.ItemID = B.ID
+	inner join ItemTypes as C on B.Type = C.Type
 END
 Go
 
