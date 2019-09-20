@@ -32,60 +32,77 @@
             this.btnCheck = new System.Windows.Forms.Button();
             this.btnModify = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnViewHistory = new System.Windows.Forms.Button();
+            this.btnAddItemType = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(12, 12);
+            this.btnAdd.Location = new System.Drawing.Point(12, 41);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(143, 23);
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Add to Inventory";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // btnCheck
             // 
-            this.btnCheck.Location = new System.Drawing.Point(12, 41);
+            this.btnCheck.Location = new System.Drawing.Point(12, 70);
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Size = new System.Drawing.Size(143, 23);
             this.btnCheck.TabIndex = 1;
             this.btnCheck.Text = "Check Inventory";
             this.btnCheck.UseVisualStyleBackColor = true;
+            this.btnCheck.Click += new System.EventHandler(this.BtnCheck_Click);
             // 
             // btnModify
             // 
-            this.btnModify.Location = new System.Drawing.Point(12, 70);
+            this.btnModify.Location = new System.Drawing.Point(12, 99);
             this.btnModify.Name = "btnModify";
             this.btnModify.Size = new System.Drawing.Size(143, 23);
             this.btnModify.TabIndex = 2;
             this.btnModify.Text = "Modify Inventory";
             this.btnModify.UseVisualStyleBackColor = true;
+            this.btnModify.Click += new System.EventHandler(this.BtnModify_Click);
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(12, 99);
+            this.btnRemove.Location = new System.Drawing.Point(12, 128);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(143, 23);
             this.btnRemove.TabIndex = 3;
             this.btnRemove.Text = "Remove from Inventory";
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.BtnRemove_Click);
             // 
-            // button1
+            // btnViewHistory
             // 
-            this.button1.Location = new System.Drawing.Point(12, 128);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "View Inventory History";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnViewHistory.Location = new System.Drawing.Point(12, 157);
+            this.btnViewHistory.Name = "btnViewHistory";
+            this.btnViewHistory.Size = new System.Drawing.Size(143, 23);
+            this.btnViewHistory.TabIndex = 4;
+            this.btnViewHistory.Text = "View Inventory History";
+            this.btnViewHistory.UseVisualStyleBackColor = true;
+            this.btnViewHistory.Click += new System.EventHandler(this.BtnViewHistory_Click);
+            // 
+            // btnAddItemType
+            // 
+            this.btnAddItemType.Location = new System.Drawing.Point(12, 12);
+            this.btnAddItemType.Name = "btnAddItemType";
+            this.btnAddItemType.Size = new System.Drawing.Size(143, 23);
+            this.btnAddItemType.TabIndex = 5;
+            this.btnAddItemType.Text = "Add Item Type";
+            this.btnAddItemType.UseVisualStyleBackColor = true;
+            this.btnAddItemType.Click += new System.EventHandler(this.BtnAddItemType_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(169, 163);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(169, 189);
+            this.Controls.Add(this.btnAddItemType);
+            this.Controls.Add(this.btnViewHistory);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnModify);
             this.Controls.Add(this.btnCheck);
@@ -103,7 +120,8 @@
         private System.Windows.Forms.Button btnCheck;
         private System.Windows.Forms.Button btnModify;
         private System.Windows.Forms.Button btnRemove;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnViewHistory;
+        private System.Windows.Forms.Button btnAddItemType;
     }
 }
 

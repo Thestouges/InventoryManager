@@ -53,6 +53,12 @@
       <DependentUpon>DatabaseInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Global.cs" />
+    <Compile Include="InventoryAddType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryAddType.Designer.cs">
+      <DependentUpon>InventoryAddType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,9 @@
     <Compile Include="SQLclass.cs" />
     <EmbeddedResource Include="DatabaseInfo.resx">
       <DependentUpon>DatabaseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryAddType.resx">
+      <DependentUpon>InventoryAddType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

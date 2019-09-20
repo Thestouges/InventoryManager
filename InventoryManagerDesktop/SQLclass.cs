@@ -39,7 +39,7 @@ namespace InventoryManagerDesktop
         public void AddItemType(string itemType, string description)
         {
             SqlConnection conn = new SqlConnection(Global.connectionStr);
-            SqlCommand cmd = new SqlCommand("AddItem", conn);
+            SqlCommand cmd = new SqlCommand("AddItemType", conn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.Add("@itemType", SqlDbType.NVarChar);

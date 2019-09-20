@@ -35,5 +35,37 @@ namespace InventoryManagerDesktop
                 this.Close();
             }
         }
+
+        private void BtnAdd_Click(object sender, EventArgs e)
+        {
+            InventoryAdd inventoryAdd = new InventoryAdd();
+            inventoryAdd.ShowDialog();
+        }
+
+        private void BtnCheck_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnModify_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnRemove_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnViewHistory_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnAddItemType_Click(object sender, EventArgs e)
+        {
+            InventoryAddType addType = new InventoryAddType();
+            addType.ShowDialog();
+        }
     }
 }
