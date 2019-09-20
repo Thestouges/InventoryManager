@@ -69,7 +69,7 @@ Go
 
 ALTER PROCEDURE [dbo].[ModifyItemQuantity]
 	-- Add the parameters for the stored procedure here
-	@itemID nvarchar(50),
+	@itemID int,
 	@quantity int
 
 AS
@@ -80,7 +80,7 @@ BEGIN
 
     -- Insert statements for procedure here
 	update Item set Quantity = @quantity
-	where @itemID = @itemID
+	where Item = @itemID
 
 	exec WriteToLog @itemId, 'Modify', @quantity
 END
