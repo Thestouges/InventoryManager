@@ -1,6 +1,6 @@
 ﻿namespace InventoryManagerDesktop
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// Required designer variable.
@@ -80,7 +80,7 @@
             this.button1.Text = "View Inventory History";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -90,8 +90,9 @@
             this.Controls.Add(this.btnModify);
             this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.btnAdd);
-            this.Name = "Form1";
+            this.Name = "Main";
             this.Text = "Inventory Manager";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
 
         }

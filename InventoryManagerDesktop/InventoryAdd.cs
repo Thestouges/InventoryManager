@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace InventoryManagerDesktop
 {
-    public partial class Form1 : Form
+    public partial class InventoryAdd : Form
     {
-        public Form1()
+        public InventoryAdd()
         {
             InitializeComponent();
+        }
+
+        private void InventoryAdd_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
