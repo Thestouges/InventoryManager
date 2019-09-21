@@ -9,8 +9,10 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-            <asp:Button ID="Button1" runat="server" Text="Button" />
+            <asp:TextBox ID="tbSearch" runat="server"></asp:TextBox>
+            <asp:Button ID="btnSearch" runat="server" Text="Search Item" OnClick="btnSearch_Click"/>
+            <br/><br/>
+            <asp:GridView ID="gvItems" runat="server"></asp:GridView>
         </div>
     </form>
 </body>

@@ -148,6 +148,23 @@ BEGIN
 END
 Go
 
+ALTER PROCEDURE [dbo].[SearchItem]
+	-- Add the parameters for the stored procedure here
+	@term nvarchar(50)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+	select distinct B.Description, A.Item, A.Quantity from Item as A
+	inner join ItemTypes as B on A.Type = B.Type
+	where A.Item like '%'+@term+'%'
+	or B.Description like '%'+@term+'%'
+END
+Go
+
 ALTER PROCEDURE [dbo].[WriteToLog]
 	-- Add the parameters for the stored procedure here
 	@itemID as int,
