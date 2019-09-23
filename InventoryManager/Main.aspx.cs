@@ -45,6 +45,7 @@ namespace InventoryManager
 
             gvItems.DataSource = dt;
             gvItems.DataBind();
+            SearchTerm.Value = tbSearch.Text;
         }
     }
 }

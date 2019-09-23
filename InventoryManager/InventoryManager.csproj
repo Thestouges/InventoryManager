@@ -68,6 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Main.aspx" />
+    <Content Include="SearchApp.js" />
+    <Content Include="SearchCtrl.js" />
     <Content Include="SQLConnectionString.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
